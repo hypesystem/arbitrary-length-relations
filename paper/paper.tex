@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\title{Arbitrary Length Relations: Creating support for chained relations in various programming languages, but with a better title for the paper than this.}
+\author{Sigurt Bladt Dinesen (sidi@itu.dk) \& Niels Roesen Abildgaard (nroe@itu.dk)}
+\maketitle
+
+\begin{abstract}
+We introduce a semigroup definition for arbitrary length relations (eg. ordering comparisons or equality checks) for Scala, Haskell and C\# (maybe)?
+The definition is very flexible provided as both a semigroup and a monad allowing easy distribution of computation of complex comparisons.
+We discuss the use of storing relations as variables, allowing later expansion (which is not possible with current single-relations in most programming languages).
+Finally, we speculate that this functionality could be implemented in programming languages to provide faster development and easier readability of relations in programming, ultimately making it easier to translate mathematical theory to code.
+\end{abstract}
+
+\section{Background}
+What are current capabilities in programming languages? (A single comparison at a time.)
+
+What is a semigroup? A monad? Why are they nice?
+
+What are those domain and codomain things and why are they relevant anyway?
+
+\section{Arbitrary length relations}
+Here's a real-world problem. And the syntax we would like.
+
+Here's the code for solving it.
+
+Here are the various monads and semigroups that allow for cool code or something. Mathematicians love this one weird trick. Here is how it works within domain/codomain lol
+
+Here are the wider implications.
+We can make arbitrary length comparison chains and all of our operators may be joined while retaining meaning.
+We can also use any comparable type in this lang, which is really cool.
+See appendix something for implementations in various other languages.
+
+\section{Saving intermediate results}
+We can perform some computation and save it in a variable. Then later, we can add new relations left or right of it.
+
+When might this be useful?
+
+\section{Future implications}
+This could be implemented in programming languages quite easily, which would be super cool, as much code would be made easier to understand and easier to translate maths to code, yo.
+
+\pagebreak
+\appendix
+\section{Appendix: Implementation in Scala}
+...
+
+\section{Appendix: Implementation in Haskell}
+...
+\end{document}
