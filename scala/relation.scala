@@ -20,10 +20,11 @@ case object False extends RelationBool[Nothing]
 case class PossiblyTrue[A](leftmost: A, rightmost: A) extends RelationBool[A]
 case object True extends RelationBool[Nothing]
 
-def PossiblyTrue1[A] = (value: A) => PossiblyTrue(value, value)
-
-implicit def valueToRelationBool[A] = (value: A) => PossiblyTrue1(value)
-implicit def relationBoolToBoolean[A] (x: RelationBool[A]): Boolean = x match {
-  case False => false
-  case _ => true
+object RelationBool {
+  def PossiblyTrue1[A] = (value: A) => PossiblyTrue(value, value)
+  implicit def valueToRelationBool[A] = (value: A) => PossiblyTrue1(value)
+  implicit def relationBoolToBoolean[A] (x: RelationBool[A]): Boolean = x match {
+    case False => false
+    case _ => true
+  }
 }
